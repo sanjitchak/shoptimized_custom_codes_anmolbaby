@@ -204,34 +204,11 @@
 				<div class="{% if settings.footer_checkout_display %} col-md-3 {% else %} col-md-4 {% endif %}  equal leftborder">
 					<div class="footer_contact fourthcol">
                        {% if settings.enable_header_contact %}
-						<h3>{{ settings.header_question_line }}</h3>
-						<h5>
-                           {% if settings.linkurlforphone %}
-                            <a href="{{ settings.urlforphone }}">
-                          
-                          {% if settings.usecustomphoneiconforfooter  %}
-                          <img src="{{'question-icon-footer.png' | asset_url}}" style="width:20px;position: relative;
-    top: -3px;">
-                          {% else %}
-                          <span class="fa fa-phone"></span>
-                          {% endif %}
-                          {{ settings.header_phone }} </a>
-                          {% else %}
-                          <a href="tel:{{ settings.header_phone }}">
-                          
-                          {% if settings.usecustomphoneiconforfooter  %}
-                          <img src="{{'question-icon-footer.png' | asset_url}}" style="width:20px;position: relative;
-    top: -3px;">
-                          {% else %}
-                          <span class="fa fa-phone"></span>
-                          {% endif %}
-                          {{ settings.header_phone }} </a>
-                        {% endif %}
-                      </h5>
+						 
                       <a href="http://g.page/anmolbabycarriers">
 						<h6>{{ settings.header_time }}
                       Anmol Baby Carriers <br> <br>
-Address: 218, Runwal Commercial Complex, Runwal Towers, Lal Bahadur Shastri Road
+                          <b>Address:</b> 218, Runwal Commercial Complex, Runwal Towers, Lal Bahadur Shastri Road
 Mulund West, Above Nisarga Restaurant,, LBS Rd
 Mumbai, Maharashtra 400080
                           
@@ -364,4 +341,4 @@ function registerr($form) {
     }
   })
 };
-</script>
+</script>g
