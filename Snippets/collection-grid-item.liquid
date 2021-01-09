@@ -34,7 +34,8 @@
               >
       {% endif %}
    {% endunless %}
-    <div class="collection-grid-item__title-wrapper">
+    <div class="collection-grid-item__title-wrapper" style="
+    margin-top: 20px;">
       <p class="collection-grid-item__title">
         {% if collection.title == blank %}
           {{ 'homepage.onboarding.collection_title' | t }}
@@ -43,7 +44,7 @@
         {% endif %}
       </p>
         <p class="collection-offer">
-     Free Shipping All Time
+     Free Shipping  
       </p>
       <p class="collection-grid-item__title shopNow">
          Shop Now
@@ -53,6 +54,13 @@
 </div>
 
 <style>
+  
+   @media screen and (min-width:1288px) {
+    .collection-grid-item__title-wrapper {
+  line-height: 7px;
+  }
+   }
+ 
   .collection-offer {
    text-align: left; 
     
@@ -69,3 +77,4 @@
        text-decoration-color: #E16FAA;
     }
 </style>
+

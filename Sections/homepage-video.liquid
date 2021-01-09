@@ -5,8 +5,7 @@
           <div class="container">
           <div class="row">
 			<div class="  grey_wrap">
-				<div class="col-md-6 grey_part" style="
-	margin: -118px auto 34px;">
+				<div class="col-md-6 grey_part"  >
 						<div>
 							<h4>{{ section.settings.video1_title }}</h4>
 						</div>
@@ -58,6 +57,12 @@
  {% endif %}
  {% endif %}
 <style>
+   @media screen and (min-width:1288px) {
+   .grey_part {
+	margin: -118px auto 34px;
+   }
+  }
+  
   .grey_bg{background:{{section.settings.footer_video_bg_color}};}
   
   .grey_part h4{color:{{section.settings.footer_video_font_color}};
