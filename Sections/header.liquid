@@ -23,6 +23,10 @@
     .cart__hover #cart-popup .cart--promo-msg {
         color:{{ section.settings.popup-cart-text-color }};
     }
+  
+ .menu > ul > li > a:hover {
+   color: #EB008D;
+ }
 
 </style>
 <div class="menu-bg"></div>
@@ -479,8 +483,7 @@
         </a>
         <ul class="menu-for" id="menu-for-{%  increment counter  %}">
           <div class="mega_Wrap clearfix">
-            <div class="  {% if block.settings.megamenu_1_default_collection != "" %}  {% if menuprodlimit == 4 %} col-md-4 {% elsif menuprodlimit == 3%} col-md-5  {% else %}col-md-7{% endif %} {% else %} noborderr{% endif %} equal-line mega_left_bar">
-              <div class="row">
+<div class="  {% if block.settings.megamenu_1_default_collection != "" %}  {% if menuprodlimit == 4 %} col-md-4 {% elsif menuprodlimit == 3%} col-md-5  {% else %}col-md-7{% endif %} {% else %} col-md-12 noborderr{% endif %} equal-line mega_left_bar">              <div class="row">
                 <div class="menu-hei n">
                   {% for j in (1..9) %}
                   {% assign submenu_heading = 'megamenu_1' | append:"_submenu_" | append:j | append:"_heading"  %}
@@ -1162,8 +1165,8 @@
   border: 1px solid #E06A36;
   transform: translateY(-7px);
 }
-
-.category_wrap {
+  
+  .category_wrap {
     
    margin: 2rem 0rem; 
   }
