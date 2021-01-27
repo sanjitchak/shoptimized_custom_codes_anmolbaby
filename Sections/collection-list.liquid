@@ -20,7 +20,7 @@
 
       {% for block in section.blocks limit: section.blocks.size %}
 
-    <div class=" {% if section.settings.collection_view == 'show_in_carousel'%} col-sm-4 {% else %} col-sm-3 {% endif %} slide-new collection_img_adj" {{ block.shopify_attributes }}>
+    <div   class=" {% if section.settings.collection_view == 'show_in_carousel'%} col-sm-4 {% else %} col-sm-3 {% endif %} slide-new collection_img_adj" {{ block.shopify_attributes }}>
           {%- assign collection = collections[block.settings.collection] -%}
           {% include 'collection-grid-item' %}
         </div>
@@ -43,8 +43,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-            margin: 4rem 0rem;">
-<a href="https://anmolbaby-carrier.myshopify.com/collections"> <button class="button-shop">SHOP OUR STORE</button> </a>
+            margin-top: -20px;
+            margin: 3rem 0rem;">
+<a href="https://anmolbaby-carrier.myshopify.com/collections/"> <button class="button-shop">SHOP OUR STORE</button> </a>
 </div>
 <style>
   .category_wrap.nobroder{border:none;}
@@ -63,6 +64,9 @@
       .cust_collection  > .owl-controls  > .owl-nav > .owl-next {
           right: -3%;
       }
+    .homaa .owl-stage-outer .owl-stage {
+    display: flex;
+    width: 100% !important;
   }
   {% endif %}
 
