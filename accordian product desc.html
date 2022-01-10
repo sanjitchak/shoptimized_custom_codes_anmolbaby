@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+.container__accordionproduct img {
+  max-width: 100%
+}
+
+ 
+.accordionproduct {
+  list-style: none;
+  max-width: 550px;
+  width: 90%;
+}
+.accordionproduct__item {
+  margin-bottom: .8rem;
+  border: 1px solid #EB008D;
+  transition: all .2s linear;
+}
+.accordionproduct__item.open {
+  box-shadow: 0 5px 15px #EB008D;
+}
+.accordionproduct__item__head {
+  padding: 1rem;
+}
+
+.accordionproduct__item__head {
+  background: #EB008D;
+  color: #EEE;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordionproduct__item__head h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+.accordionproduct__item__head i {
+  transition: transform .3s linear;
+}
+.accordionproduct__item.open .accordionproduct__item__head i {
+  transform: rotate(-180deg)
+}
+
+.accordionproduct__item__body {
+  overflow: hidden;
+  height: 0;
+  border-left: 3px solid #EB008D;
+}
+.accordionproduct__item.open .accordionproduct__item__body {
+  padding: 1rem;
+  height: auto;
+}
+.accordionproduct__item__body > *:not(:first-child) {
+  margin-top: .8rem;
+}
+.accordionproduct__item__body p {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+    </style>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  
+</head>
+<body>
+    
+<div class="container__accordionproduct">
+    <ul class="accordionproduct">
+    <li class="accordionproduct__item"><!-- Accordionproduct 1 -->
+    <div class="accordionproduct__item__head">
+    <h2>Description</h2>
+    <i class="fas fa-chevron-down"></i></div>
+    <div class="accordionproduct__item__body">
+    <p>The Easy Burgundy Soft Structured Carrier is complete in its own way to showcase elegance, subtleness and trend. With this carrier, you can surely say Burgundy is the new Red! <br><br> This is a budget carrier, with the body panel, waistband and shoulder straps made of Grey 100% cotton, and contrasting accents of handwoven wrap fabric on the thigh padding. The cotton fabric ensures sturdiness and durability, enabling this carrier to withstand more weight and endure more pressure, for a longer period of time. Lightweight and compact, it’s a steal deal.</p>
+    </div>
+    </li>
+    <li class="accordionproduct__item open"><!-- Accordionproduct 2 -->
+    <div class="accordionproduct__item__head">
+    <h2>Specifications</h2>
+    <i class="fas fa-chevron-down"></i></div>
+    <div class="accordionproduct__item__body">
+    <p>Made from (Fabric): 100% cotton fabric, with handwoven wrap used on thigh padding. <br><br> Ideal for age: 4 months (2 months with insert) - 3 years <br><br> Ideal for weight: 7 kg (5 kg with insert) - 20 kg</p>
+    </div>
+    </li>
+    <li class="accordionproduct__item"><!-- Accordionproduct 4 -->
+    <div class="accordionproduct__item__head">
+    <h2>Special Features</h2>
+    <i class="fas fa-chevron-down"></i></div>
+    <div class="accordionproduct__item__body">
+    <p>Extremely sturdy and durable.<br> Can be used for both front and back carries.<br> World’s best quality Duraflex buckles used.<br> 3 point safety buckle on waistbelt to prevent accidental opening.<br> Waistbelt also includes elastic belt loop for additional security.<br> Soft padded thigh cushions for baby’s comfort.<br> In-built hood for protective covering, enables discreet nursing.<br> Easily accessible pocket on waistband.</p>
+    </div>
+    </li>
+    <li class="accordionproduct__item"><!-- Accordionproduct 4 -->
+    <div class="accordionproduct__item__head">
+    <h2>Important</h2>
+    <i class="fas fa-chevron-down"></i></div>
+    <div class="accordionproduct__item__body">
+    <p>We do not recommend back carry until your baby has strong and consistent head, neck, and torso control, and can push him/herself independently into, and remain in, a seated position on a consistent basis</p>
+    </div>
+    </li>
+    <li class="accordionproduct__item"><!-- Accordionproduct 4 -->
+    <div class="accordionproduct__item__head">
+    <h2>Wash Care</h2>
+    <i class="fas fa-chevron-down"></i></div>
+    <div class="accordionproduct__item__body">
+    <p>Spot cleaning when needed.<br> Machine-washable.<br> Cover buckles in socks &amp; carrier in a pillowcase to avoid damage.<br> Use mild detergent. Do not bleach.<br> Dry in shade with no direct exposure to sunlight.</p>
+    </div>
+    </li>
+    </ul>
+    </div>
+</body>
+<script>
+    const accordionproduct_items_elms = document.querySelectorAll('.accordionproduct .accordionproduct__item');
+    
+    accordionproduct_items_elms.forEach(accordionproductItem => {
+    
+      accordionproductItem.querySelector('.accordionproduct__item__head').addEventListener('click', (e) => {
+        accordionproductItem.classList.toggle('open');
+      });
+    
+    });</script>
+</html>
